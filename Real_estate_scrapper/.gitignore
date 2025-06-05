@@ -1,0 +1,6 @@
+# 👉 keep secrets & junk out of Git
+.env
+*.log
+__pycache__/
+*.pyc
+.idea/
