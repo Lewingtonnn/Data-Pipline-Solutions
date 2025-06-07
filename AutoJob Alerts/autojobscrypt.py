@@ -93,9 +93,53 @@ def send_telegram_message(jobs):
     except Exception as e:
         print(f"❌ Failed to send Telegram message: {e}")
 
+
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# existing imports...
+# (everything else remains unchanged)
+
+# Add this new function to send email
+def send_email_message(jobs):
+    sender = os.getenv("EMAIL_USER")
+    password = os.getenv("EMAIL_PASSWORD")
+    recipient = os.getenv("EMAIL_RECEIVER")
+
+    if not jobs:
+        body = "No jobs found 😞, or code failed to scrap available jobs"
+    else:
+        body = "🚀 Latest Remote Dev Jobs:\n\n"
+        for job in jobs[:5]:
+            body += (
+                f"{job['Title']} at {job['Employer']}\n"
+                f"📍 {job['Location']} | 💰 {job['Salary range']}\n"
+                f"🕒 Posted: {job['Time past']}\n"
+                f"🔗 Apply: {job['Link']}\n\n"
+            )
+
+    msg = MIMEMultipart()
+    msg['From'] = sender
+    msg['To'] = recipient
+    msg['Subject'] = "🚀 Latest Remote Dev Jobs Update"
+
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+            server.login(sender, password)
+            server.send_message(msg)
+        print("✅ Email sent successfully")
+    except Exception as e:
+        print(f"❌ Failed to send email: {e}")
+
+
+# Update job_task to also send email
 def job_task():
     jobs = scrap_jobs()
     send_telegram_message(jobs)
+    send_email_message(jobs)
 job_task()#checks if the code is working properly(not required in this code though)
 if __name__ == "__main__":
     schedule.every().day.at("10:00").do(job_task)

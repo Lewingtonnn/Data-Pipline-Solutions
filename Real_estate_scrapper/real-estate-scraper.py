@@ -65,8 +65,8 @@ def scrape_properties(url: str) -> list[dict]:
                                                                                          class_='price') else "N/A"
                 location = listing.find('div', class_='location').text.strip() if listing.find('div',
                                                                                                class_='location') else "N/A"
-                bedrooms = listing.find('span', class_='housing') or listing.find('span', class_='bedrooms')
-                bedrooms = bedrooms.text.strip() if bedrooms else "N/A"
+                bedrooms = listing.find('span', class_='post-bedrooms')
+                bedrooms = bedrooms.text.strip() if bedrooms else "View the listing for this information"
 
                 link = listing.find('a', href=True)
                 if link:
@@ -202,7 +202,7 @@ def main():
             save_to_csv(properties)
 
             # Send alerts
-            #send_email(properties)-once the emails and passwords are set
+            send_email(properties)
             send_telegram_alert(properties)
         else:
             logger.warning("No properties scraped")
