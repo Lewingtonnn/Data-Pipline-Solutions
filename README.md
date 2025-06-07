@@ -23,8 +23,8 @@
 **I'm currently available for freelance projects!**  
 
 📩 Email: [l3wis.nganga@gmail.com](mailto:l3wis.nganga@gmail.com)  
-💼 Upwork: [Link](https://www.upwork.com/freelancers/~017c8724343cc09b10?mp_source=share)  
-🔗 Fiverr: [Link](https://www.fiverr.com/s/ljEQQE2)]  
+💼 Upwork: [Lewis N.](https://www.upwork.com/freelancers/~017c8724343cc09b10?mp_source=share)  
+🔗 Fiverr: [Lewingtonnn](https://www.fiverr.com/s/ljEQQE2)]  
 
 ```python
 # Quick-start for clients:
