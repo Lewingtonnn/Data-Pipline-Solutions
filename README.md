@@ -6,7 +6,7 @@
 
 | Project | Description | Key Features | Demo |
 |---------|-------------|--------------|------|
-| **[🏠 Real Estate Scraper](real-estate-scraper/)** | Automated property listing collector | • Scrapes 1000+ listings/day<br>• Alerts via Telegram/Email<br>• Error-resistant | [Screenshots and demo](https://github.com/Lewingtonnn/Data-Pipline-Solutions/tree/main/Real_estate_scrapper/screenshots%20and%20demo) |
+| **[🏠 Real Estate Scraper](https://github.com/Lewingtonnn/Data-Pipline-Solutions/tree/main/Real_estate_scrapper)** | Automated property listing collector | • Scrapes 1000+ listings/day<br>• Alerts via Telegram/Email<br>• Error-resistant | [Screenshots and demo](https://github.com/Lewingtonnn/Data-Pipline-Solutions/tree/main/Real_estate_scrapper/screenshots%20and%20demo) |
 | **[💼 Job Alerts System](job-alerts/)** | Remote job opportunity tracker | • Daily automated reports<br>• CSV/Slack outputs<br>• Custom filters | [Screenshot](https://github.com/Lewingtonnn/Data-Pipline-Solutions/tree/main/AutoJob%20Alerts/screenshots)
 | **[₿ Crypto Price Bot](crypto-bot/)** | Real-time market alerts | • /price commands<br>• 10+ exchanges<br>• 24/7 monitoring | [Try Bot](https://t.me/l3wisBot) |
 
