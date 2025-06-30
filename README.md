@@ -1,6 +1,5 @@
 # 🔥 Automation & Data Pipeline Solutions
 
-**Hi there, I'm Lewis Ng'ang'a - I help businesses automate repetitive tasks and build custom data pipelines.**  
 
 ## 🏆 Featured Projects
 
@@ -19,7 +18,6 @@
 - Data: Pandas, CSV/JSON, Databases
 ```
 
-## 💌 Let's Work Together
 **I'm currently available for freelance projects!**  
 
 📩 Email: [l3wis.nganga@gmail.com](mailto:l3wis.nganga@gmail.com)  
